@@ -15,9 +15,12 @@ pivot: "left" | "right" - side where starts writing
 }
 ```
 
-# Font names (UNFINISHED)
+# Font names
 Font names consist of 2 parts:
 1. Family - may be common to 1 or more languages:\
 	"european" - common to English, French, Russian...\
 	"simplified_chinese" - only for Simplified Chinese
-2. Style - bold, italic...
+2. Style - regular, bold, italic...
+In font name in GUI file these parts must be connected by "/". Example: "european/regular".
+
+### UNFINISHED
