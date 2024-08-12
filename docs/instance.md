@@ -50,5 +50,13 @@ Returns a new lualocaDE object based on `string`
 ## update
 Updates text of the specified objects. By default, updates all objects.
 ### Params:
-0. self: lualocaDE.instance
+0. self: lualocaDE.instance\
 ...: node | druid.text
+
+# Fields
+
+## objects: { \[node | druid.text]: [lualocaDE.object](https://github.com/Mantyi-Studio/lualocaDE/blob/main/docs/main.md#lualocaDEobject) }
+Contains all instance objects
+
+## data (UNFINISHED)
+Contains all instance data
