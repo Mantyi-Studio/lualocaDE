@@ -1,4 +1,7 @@
-# Types (UNFINISHED)
+# Syntax
+Read about syntax in [syntax.md](https://github.com/Mantyi-Studio/lualocaDE/blob/main/docs/syntax.md)
+
+# Types
 ## lualocaDE.object
 Table containing data needed to get text and set it to a text node\
 [lualoca.object](https://github.com/Mantyi-Studio/lualoca/blob/main/docs/main.md#lualocaobject) + 
@@ -9,7 +12,7 @@ Table containing data needed to get text and set it to a text node\
 }
 ```
 
-# Classes (UNFINISHED)
+# Classes
 ## [Instance](https://github.com/Mantyi-Studio/lualocaDE/blob/main/docs/instance.md)
 It's needed to autotranslate text. Every lualocaDE instance can use 2 languages: [main and spare](https://github.com/Mantyi-Studio/lualocaDE/blob/main/docs/main.md#params)
 
