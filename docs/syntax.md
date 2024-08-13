@@ -23,4 +23,7 @@ Font names consist of 2 parts:
 2. Style - regular, bold, italic...
 In font name in GUI file these parts must be connected by "/". Example: "european/regular".
 
-### UNFINISHED
+# String format of [lualocaDE.object](https://github.com/Mantyi-Studio/lualoca/blob/main/docs/main.md#lualocaDEobject)
+Method [lualocaDE:to_object](https://github.com/Mantyi-Studio/lualoca/blob/main/docs/instance.md#to_object) uses this special string format\
+**It only supports path and font params**. They must be separated by ";" symbol. To indicate what param it is before param value write 1st letter of its name ("p" - path, "f" - font) (you can write capital letter to make it easier to distinguish between param name and value).
+UNFINISHED
