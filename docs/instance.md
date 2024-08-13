@@ -58,5 +58,20 @@ Updates text of the specified objects. By default, updates all objects.
 ## objects: { \[node | druid.text]: [lualocaDE.object](https://github.com/Mantyi-Studio/lualocaDE/blob/main/docs/main.md#lualocaDEobject) }
 Contains all instance objects
 
-## data (UNFINISHED)
+## data
 Contains all instance data
+
+### funlutab: funlutab
+[Funlutab module](https://github.com/Mantyi-Studio/funlutab)
+
+### instances: { main: [lualoca.instance](https://github.com/Mantyi-Studio/lualoca/blob/main/docs/main.md#instance), spare?: [lualoca.instance](https://github.com/Mantyi-Studio/lualoca/blob/main/docs/main.md#instance) }
+Instances for main and spare languages
+
+### lualoca: lualoca
+[Lualoca module](https://github.com/Mantyi-Studio/lualoca)
+
+### on_update: { nodes: (node | druid.text)[], before?: fun(), after?: fun() }[]
+on_update functions
+
+### params: { main: {\[string]: any}, spare?: {\[string]: any} }
+Params for main and spare languages
