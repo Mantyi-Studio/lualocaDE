@@ -11,7 +11,7 @@ Table containing data needed to get text and set it to a text node\
 	callback?: fun(self: self, node: node|druid.text, text: string, language: string) - calls after updating text
 }
 ```
-[About fonts](https://github.com/Mantyi-Studio/lualocaDE/blob/main/docs/syntax.md#font-names)
+[About font names](https://github.com/Mantyi-Studio/lualocaDE/blob/main/docs/syntax.md#font-names)
 
 # Classes
 ## [Instance](https://github.com/Mantyi-Studio/lualocaDE/blob/main/docs/instance.md)
