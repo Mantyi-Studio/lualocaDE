@@ -43,7 +43,7 @@ Returns object of `node`
 Returns a new lualocaDE object based on `string`
 ### Params:
 0. self: lualocaDE.instance
-1. string: string
+1. string: string - [lualocaDE.object in string format](https://github.com/Mantyi-Studio/lualocaDE/blob/main/docs/syntax.md#string-format-of-lualocadeobject)
 ### Returns:
 1. [lualocaDE.object](https://github.com/Mantyi-Studio/lualocaDE/blob/main/docs/main.md#lualocaDEobject)
 
