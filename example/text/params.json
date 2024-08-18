@@ -1,0 +1,12 @@
+{
+    "en": {
+        "name": "English",
+        "font": "european",
+        "pivot": "left"
+    },
+    "ru": {
+        "name": "Русский",
+        "font": "european",
+        "pivot": "left"
+    }
+}

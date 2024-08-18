@@ -1,0 +1,19 @@
+[bootstrap]
+main_collection = /example/main.collectionc
+
+[script]
+shared_state = 1
+
+[display]
+width = 600
+height = 376
+display_profiles = /example/display.display_profilesc
+
+[android]
+input_method = HiddenInputField
+
+[project]
+title = LualocaDE example
+version = 4.0
+custom_resources = /example/text/
+
