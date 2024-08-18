@@ -1,0 +1,447 @@
+script: "/example/main.gui_script"
+fonts {
+  name: "european/regular"
+  font: "/example/fonts/european_regular.font"
+}
+fonts {
+  name: "european/bold"
+  font: "/example/fonts/european_bold.font"
+}
+nodes {
+  size {
+    x: 600.0
+    y: 376.0
+  }
+  type: TYPE_BOX
+  id: "background"
+  pivot: PIVOT_SW
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 8.0
+    y: 352.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 64.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "<language>"
+  font: "european/regular"
+  id: "language"
+  pivot: PIVOT_W
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 375.0
+    y: 352.0
+  }
+  size {
+    x: 140.0
+    y: 32.0
+  }
+  color {
+    x: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "en"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 280.0
+    y: 64.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "<english>"
+  font: "european/regular"
+  id: "en/text"
+  parent: "en"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 523.0
+    y: 352.0
+  }
+  size {
+    x: 140.0
+    y: 32.0
+  }
+  color {
+    x: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "ru"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 280.0
+    y: 64.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "<russian>"
+  font: "european/regular"
+  id: "ru/text"
+  parent: "ru"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 8.0
+    y: 312.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 64.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Pregular;Fregular"
+  font: "european/regular"
+  id: "regular"
+  pivot: PIVOT_W
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 8.0
+    y: 288.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 192.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Pmulti-line;Fregular"
+  font: "european/regular"
+  id: "multi-line"
+  pivot: PIVOT_NW
+  inherit_alpha: true
+  text_leading: 0.75
+}
+nodes {
+  position {
+    x: 8.0
+    y: 184.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 192.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Puntranslated;Fregular"
+  font: "european/regular"
+  id: "untranslated"
+  pivot: PIVOT_NW
+  line_break: true
+  inherit_alpha: true
+  text_leading: 0.75
+}
+nodes {
+  position {
+    x: 8.0
+    y: 64.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 64.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "<nested>"
+  font: "european/regular"
+  id: "nested"
+  pivot: PIVOT_W
+  inherit_alpha: true
+  text_leading: 0.75
+}
+nodes {
+  position {
+    x: 8.0
+    y: 24.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 64.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "<bold>"
+  font: "european/regular"
+  id: "bold"
+  pivot: PIVOT_W
+  inherit_alpha: true
+  text_leading: 0.75
+}
+nodes {
+  position {
+    x: 304.0
+    y: 312.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 64.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Ptime;Fregular"
+  font: "european/regular"
+  id: "time"
+  pivot: PIVOT_W
+  inherit_alpha: true
+  text_leading: 0.75
+}
+nodes {
+  position {
+    x: 304.0
+    y: 288.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 256.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Pwith_params/text;Fregular"
+  font: "european/regular"
+  id: "with_params"
+  pivot: PIVOT_NW
+  line_break: true
+  inherit_alpha: true
+  text_leading: 0.75
+}
+nodes {
+  position {
+    x: 304.0
+    y: 136.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 64.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Pwith_params/name;Fregular"
+  font: "european/regular"
+  id: "name_text"
+  pivot: PIVOT_W
+  inherit_alpha: true
+  text_leading: 0.75
+}
+nodes {
+  position {
+    x: 304.0
+    y: 116.0
+  }
+  size {
+    x: 288.0
+    y: 32.0
+  }
+  color {
+    x: 0.749
+    y: 0.749
+    z: 0.749
+  }
+  type: TYPE_BOX
+  id: "name_entry"
+  pivot: PIVOT_NW
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -16.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 64.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  font: "european/regular"
+  id: "name_entry/text"
+  pivot: PIVOT_W
+  parent: "name_entry"
+  inherit_alpha: true
+  text_leading: 0.75
+}
+nodes {
+  position {
+    x: 304.0
+    y: 60.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 64.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Pwith_params/profession;Fregular"
+  font: "european/regular"
+  id: "profession_text"
+  pivot: PIVOT_W
+  inherit_alpha: true
+  text_leading: 0.75
+}
+nodes {
+  position {
+    x: 304.0
+    y: 40.0
+  }
+  size {
+    x: 288.0
+    y: 32.0
+  }
+  color {
+    x: 0.749
+    y: 0.749
+    z: 0.749
+  }
+  type: TYPE_BOX
+  id: "profession_entry"
+  pivot: PIVOT_NW
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -16.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 576.0
+    y: 64.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  font: "european/regular"
+  id: "profession_entry/text"
+  pivot: PIVOT_W
+  parent: "profession_entry"
+  inherit_alpha: true
+  text_leading: 0.75
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

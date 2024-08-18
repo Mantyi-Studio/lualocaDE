@@ -1,0 +1,5 @@
+font: "/example/fonts/NotoSans-Medium.ttf"
+material: "/builtins/fonts/font.material"
+size: 64
+all_chars: true
+characters: " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"

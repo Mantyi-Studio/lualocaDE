@@ -1,0 +1,80 @@
+--import modules
+
+local druid=require('example.druid.druid')
+druid.event=require('example.druid.event')
+druid.register('input', require('example.druid.extended.input'))
+local funlutab=require('example.modules.funlutab')
+local lualoca=require('example.modules.lualoca')
+local lualocaDE=require('example.modules.lualocaDE')
+
+function init(self)
+	--create instance
+
+	self.lualocaDE=lualocaDE.Instance(funlutab, lualoca, '/example/text/', '/example/text/params.json', 'en', 'en')
+	--create druid instance (only for UI)
+
+	self.druid=druid.new(self)
+	self.druid:new_button('en', function() self.lualocaDE.data.instances.main:set_language('en') return self.lualocaDE:update() end)
+	self.druid:new_button('ru', function() self.lualocaDE.data.instances.main:set_language('ru') return self.lualocaDE:update() end)
+	--manual text setting
+	self.lualocaDE:create(gui.get_node('language'), {path={'language'}, font='regular'})
+
+	--example of using language params (getting language names)
+
+	local english=self.lualocaDE.data.instances.main.data.params.en.name
+	local russian=self.lualocaDE.data.instances.main.data.params.ru.name
+	gui.set_text(gui.get_node('en/text'), english)
+	gui.set_text(gui.get_node('ru/text'), russian)
+
+	--if text doesn't have translation into specified language, it'll be displayed on `spare` language
+	self.lualocaDE:create(gui.get_node('untranslated'))
+
+	--auto text setting
+	self.lualocaDE:create(gui.get_node('regular'))
+	--you can also use this:
+
+	local multi_line=gui.get_node('multi-line')
+	self.lualocaDE:create(multi_line, self.lualocaDE:to_object(gui.get_text(multi_line)))
+	--text can be nested
+	self.lualocaDE:create(gui.get_node('nested'), {path={'text', 'nested'}, font='regular'})
+	--you can use different fonts
+	self.lualocaDE:create(gui.get_node('bold'), {path={'bold'}, font='bold'})
+
+	self.time_node=gui.get_node('time')
+	self.lualocaDE:create(self.time_node)
+	self.time=-1
+
+	self.with_params=gui.get_node('with_params')
+	self.lualocaDE:create(self.with_params).values={}
+	self.lualocaDE:create(gui.get_node('name_text'))
+	self.lualocaDE:create(gui.get_node('profession_text'))
+	local name=self.druid:new_input(gui.get_node('name_entry'), gui.get_node('name_entry/text'))
+	name.on_input_text:subscribe(function(_, text) self.lualocaDE:get(self.with_params).values.n=text return self.lualocaDE:update(self.with_params) end)
+	self.druid:new_input(gui.get_node('profession_entry'), gui.get_node('profession_entry/text'))
+	local profession=self.druid:new_input(gui.get_node('profession_entry'), gui.get_node('profession_entry/text'))
+	profession.on_input_text:subscribe(function(_, text) self.lualocaDE:get(self.with_params).values.p=text return self.lualocaDE:update(self.with_params) end)
+end
+
+function final(self)
+	return self.druid:final()
+end
+
+function update(self, dt)
+	local time=os.time()
+	if self.time~=time then
+		self.time=time
+		time=os.date('*t', time)
+		--use this to set param values
+		self.lualocaDE:get(self.time_node).values={h=time.hour, m=time.min, s=time.sec}
+		self.lualocaDE:update(self.time_node)
+	end
+	return self.druid:update(dt)
+end
+
+function on_message(self, message_id, message, sender)
+	return self.druid:on_message(message_id, message, sender)
+end
+
+function on_input(self, action_id, action)
+	return self.druid:on_input(action_id, action)
+end
