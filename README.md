@@ -10,4 +10,3 @@ It's recommended to use [semneko lua](https://marketplace.visualstudio.com/items
 
 ## Docs
 You can read module docs in [docs/main.md file](https://github.com/Mantyi-Studio/lualocaDE/blob/main/docs/main.md)
-### I'll publish example project until the end of the week
